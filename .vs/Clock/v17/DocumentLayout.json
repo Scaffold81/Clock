@@ -3,28 +3,28 @@
   "WorkspaceRootPath": "D:\\UnityProjects\\Clock\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B44C7ACD-83FE-451B-0A9D-FD9FDC3147A4}|Assembly-CSharp.csproj|d:\\unityprojects\\clock\\assets\\scripts\\clock\\clockinputviewbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B44C7ACD-83FE-451B-0A9D-FD9FDC3147A4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\clock\\clockinputviewbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B44C7ACD-83FE-451B-0A9D-FD9FDC3147A4}|Assembly-CSharp.csproj|d:\\unityprojects\\clock\\assets\\scripts\\clock\\clockpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B44C7ACD-83FE-451B-0A9D-FD9FDC3147A4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\clock\\clockpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B44C7ACD-83FE-451B-0A9D-FD9FDC3147A4}|Assembly-CSharp.csproj|D:\\UnityProjects\\Clock\\assets\\scripts\\clock\\clockviewbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B44C7ACD-83FE-451B-0A9D-FD9FDC3147A4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\clock\\clockviewbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B44C7ACD-83FE-451B-0A9D-FD9FDC3147A4}|Assembly-CSharp.csproj|D:\\UnityProjects\\Clock\\assets\\scripts\\clock\\clockbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B44C7ACD-83FE-451B-0A9D-FD9FDC3147A4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\clock\\clockbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B44C7ACD-83FE-451B-0A9D-FD9FDC3147A4}|Assembly-CSharp.csproj|D:\\UnityProjects\\Clock\\assets\\scripts\\clock\\clockinputviewbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B44C7ACD-83FE-451B-0A9D-FD9FDC3147A4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\clock\\clockinputviewbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B44C7ACD-83FE-451B-0A9D-FD9FDC3147A4}|Assembly-CSharp.csproj|D:\\UnityProjects\\Clock\\assets\\scripts\\clock\\clockmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B44C7ACD-83FE-451B-0A9D-FD9FDC3147A4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\clock\\clockmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B44C7ACD-83FE-451B-0A9D-FD9FDC3147A4}|Assembly-CSharp.csproj|D:\\UnityProjects\\Clock\\assets\\scripts\\clock\\clockpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B44C7ACD-83FE-451B-0A9D-FD9FDC3147A4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\clock\\clockpresenter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B44C7ACD-83FE-451B-0A9D-FD9FDC3147A4}|Assembly-CSharp.csproj|D:\\UnityProjects\\Clock\\assets\\scripts\\clock\\clockviewbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B44C7ACD-83FE-451B-0A9D-FD9FDC3147A4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\clock\\clockviewbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B44C7ACD-83FE-451B-0A9D-FD9FDC3147A4}|Assembly-CSharp.csproj|D:\\UnityProjects\\Clock\\assets\\scripts\\clock\\interfaces\\iclockview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B44C7ACD-83FE-451B-0A9D-FD9FDC3147A4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\clock\\interfaces\\iclockview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B44C7ACD-83FE-451B-0A9D-FD9FDC3147A4}|Assembly-CSharp.csproj|D:\\UnityProjects\\Clock\\assets\\scripts\\clock\\clockbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B44C7ACD-83FE-451B-0A9D-FD9FDC3147A4}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\clock\\clockbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,37 +34,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ClockModel.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Clock\\Assets\\Scripts\\Clock\\ClockModel.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Clock\\ClockModel.cs",
               "ToolTip": "D:\\UnityProjects\\Clock\\Assets\\Scripts\\Clock\\ClockModel.cs",
               "RelativeToolTip": "Assets\\Scripts\\Clock\\ClockModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAjAAAA",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAgwB0AAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-22T23:55:56.408Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "ClockInputViewBase.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Clock\\Assets\\Scripts\\Clock\\ClockInputViewBase.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Clock\\ClockInputViewBase.cs",
               "ToolTip": "D:\\UnityProjects\\Clock\\Assets\\Scripts\\Clock\\ClockInputViewBase.cs",
               "RelativeToolTip": "Assets\\Scripts\\Clock\\ClockInputViewBase.cs",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAQwGgAAAAYAAAA",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAQwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-23T08:48:07.02Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "ClockViewBase.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Clock\\Assets\\Scripts\\Clock\\ClockViewBase.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Clock\\ClockViewBase.cs",
@@ -77,7 +77,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "IClockView.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Clock\\Assets\\Scripts\\Clock\\Interfaces\\IClockView.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Clock\\Interfaces\\IClockView.cs",
@@ -85,31 +85,30 @@
               "RelativeToolTip": "Assets\\Scripts\\Clock\\Interfaces\\IClockView.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAqwAUAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-09-23T08:40:42.94Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-09-23T08:40:42.94Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "ClockPresenter.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Clock\\Assets\\Scripts\\Clock\\ClockPresenter.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Clock\\ClockPresenter.cs",
               "ToolTip": "D:\\UnityProjects\\Clock\\Assets\\Scripts\\Clock\\ClockPresenter.cs",
               "RelativeToolTip": "Assets\\Scripts\\Clock\\ClockPresenter.cs",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAjwF4AAAAWAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAA5wCQAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-22T23:48:13.425Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "ClockBase.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Clock\\Assets\\Scripts\\Clock\\ClockBase.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Clock\\ClockBase.cs",
               "ToolTip": "D:\\UnityProjects\\Clock\\Assets\\Scripts\\Clock\\ClockBase.cs",
               "RelativeToolTip": "Assets\\Scripts\\Clock\\ClockBase.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAA7wBcAAAAIAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAABaAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-22T23:35:34.874Z",
               "EditorCaption": ""

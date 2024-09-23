@@ -313,7 +313,6 @@ GameObject:
   - component: {fileID: 6359274358187457562}
   - component: {fileID: 8815683853932407874}
   - component: {fileID: 2893147870203202586}
-  - component: {fileID: 611607254330755967}
   m_Layer: 5
   m_Name: AnalogClock
   m_TagString: Untagged
@@ -381,25 +380,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &611607254330755967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5339502599337819106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03a03080793a9ab4ab00e6a6483cd057, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  url: https://yandex.com/time/sync.json
-  hourArrow: {fileID: 3197564653881475734}
-  minuteArrow: {fileID: 2422408160570274568}
-  secondArrow: {fileID: 6281159279669916279}
-  hour: {fileID: 0}
-  minute: {fileID: 0}
-  second: {fileID: 0}
 --- !u!1 &6281159279669916279
 GameObject:
   m_ObjectHideFlags: 0

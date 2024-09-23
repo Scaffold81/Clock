@@ -1,6 +1,6 @@
 ﻿using System;
+using System.Collections;
 using System.Threading;
-using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Networking;
 
@@ -11,79 +11,75 @@ public class ClockPresenter : MonoBehaviour, IClockPresenter
     private string url = "http://time.microsoft.com";
 
     private CancellationTokenSource cancellationTokenSource;
-
-    public ClockPresenter(IClockModel model, IClockView view, string url)
+    
+    public IClockPresenter Init(IClockModel clockModel, IClockView clockView, string url)
     {
         cancellationTokenSource = new CancellationTokenSource();
-        clockModel = model;
-        clockView = view;
+        this.clockModel = clockModel;
+        this.clockView = clockView;
         this.url = url;
+       
+        return this;
     }
-
+    
     public void InitClock()
     {
         GetTimeFromServer(true);
-        CheckTimeFromServer(false);
-        StartClock();
+        StartCoroutine(CheckTimeFromServer(false));
+        StartCoroutine(StartClock());
+        StartCoroutine(ShowAnalogTime());
+        StartCoroutine(ShowDigitalTime());
     }
 
-    private async void StartClock()
+    private IEnumerator StartClock()
     {
-        while (!cancellationTokenSource.Token.IsCancellationRequested && clockModel != null)
+        while (!cancellationTokenSource.Token.IsCancellationRequested)
         {
             clockModel.LocalDateTime = clockModel.LocalDateTime.AddSeconds(1);
 
-            await Task.Delay(1000);
-
-            if (!cancellationTokenSource.Token.IsCancellationRequested)
-            {
-                clockView.UpdateAnalogTime(clockModel.LocalDateTime);
-                clockView.UpdateDigitalTime(clockModel.LocalDateTime);
-            }
+            yield return new WaitForSeconds(1);
+            clockView.UpdateAnalogTime(clockModel.LocalDateTime);
+            clockView.UpdateDigitalTime(clockModel.LocalDateTime);
         }
     }
 
-    private async void GetTimeFromServer(bool start)
+    private  void GetTimeFromServer(bool start)
     {
-        await FetchTimeFromServer(start);
+        StartCoroutine(FetchTimeFromServer(start));
     }
 
-    private async void CheckTimeFromServer(bool start)
+    private IEnumerator CheckTimeFromServer(bool start)
     {
-        while (true)
+        while (!cancellationTokenSource.Token.IsCancellationRequested)
         {
-            await Task.Delay(60000);
-            await FetchTimeFromServer(start);
+            yield return new WaitForSeconds(60);
+            StartCoroutine(FetchTimeFromServer(start));
         }
     }
 
-    private async Task FetchTimeFromServer(bool start)
+    private IEnumerator FetchTimeFromServer(bool start)
     {
         UnityWebRequest request = UnityWebRequest.Get(url);
-        
-        request.SendWebRequest();
-        
-        while (!request.isDone)
-        {
-            await Task.Yield();
-        }
+        yield return request.SendWebRequest();
 
         if (request.result == UnityWebRequest.Result.Success)
         {
             var response = request.downloadHandler.text;
             clockModel.UpdateLocalTime(response, start);
-            clockView.UpdateAnalogTime(clockModel.LocalDateTime);
-            clockView.UpdateDigitalTime(clockModel.LocalDateTime);
         }
         else
         {
-            Debug.LogError("Error getting time from server: " + request.error);
+            clockModel.UpdateLocalDateTime(DateTime.UtcNow);
+            Debug.Log("Error getting time from server: " + request.error);
         }
+
+        clockView.UpdateAnalogTime(clockModel.LocalDateTime);
+        clockView.UpdateDigitalTime(clockModel.LocalDateTime);
 
         request.Dispose();
     }
 
-    private async void ShowAnalogTime()
+    private IEnumerator ShowAnalogTime()
     {
         while (!cancellationTokenSource.Token.IsCancellationRequested)
         {
@@ -94,17 +90,17 @@ public class ClockPresenter : MonoBehaviour, IClockPresenter
 
             clockView.UpdateAnalogTime(clockModel.LocalDateTime);
 
-            await Task.Delay(100);
+            yield return new WaitForSeconds(0.1f);
         }
     }
 
-    private async void ShowDigitalTime()
+    private IEnumerator ShowDigitalTime()
     {
         while (!cancellationTokenSource.Token.IsCancellationRequested)
         {
             clockView.UpdateDigitalTime(clockModel.LocalDateTime);
 
-            await Task.Delay(100);
+            yield return new WaitForSeconds(0.1f);
         }
     }
 

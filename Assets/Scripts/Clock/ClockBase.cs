@@ -1,11 +1,4 @@
-using DG.Tweening;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
-using TMPro;
 using UnityEngine;
-using UnityEngine.Networking;
 
 public class ClockBase : MonoBehaviour
 {
@@ -21,7 +14,7 @@ public class ClockBase : MonoBehaviour
         clockView = GetComponent<IClockView>();
         clockModel = new ClockModel(); 
         clockInputView = GetComponent<IClockInputView>().Init(clockModel);
-        clockPresenter = new ClockPresenter(clockModel, clockView, url);
+        clockPresenter = GetComponent<IClockPresenter>().Init(clockModel, clockView, url);;
     }
 
     private void Start()

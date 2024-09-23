@@ -271,10 +271,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 2024, y: 600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -446,6 +446,10 @@ GameObject:
   - component: {fileID: 1006360422242300459}
   - component: {fileID: 2132365772897058965}
   - component: {fileID: 6881516126716865860}
+  - component: {fileID: 6291971073428453764}
+  - component: {fileID: 3595459312657904356}
+  - component: {fileID: 2612276999316799810}
+  - component: {fileID: 4274851449544022050}
   m_Layer: 5
   m_Name: ClocksPanel
   m_TagString: Untagged
@@ -509,6 +513,65 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &6291971073428453764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8373973572606336397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d12cc98b278f8f4f8dbf28c91ce0067, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  url: https://yandex.com/time/sync.json
+--- !u!114 &3595459312657904356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8373973572606336397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c3087807e654e242890ff10566fa285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hourArrow: {fileID: 8948385127127177612}
+  minuteArrow: {fileID: 8201366785542514706}
+  secondArrow: {fileID: 532601050018949485}
+  hour: {fileID: 5178479049028123718}
+  minute: {fileID: 8241335802687341573}
+  second: {fileID: 4216639386261308406}
+--- !u!114 &2612276999316799810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8373973572606336397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 567f31d6f2b786042ab0a7bdd41dc06f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hour: {fileID: 5178479049028123718}
+  minute: {fileID: 8241335802687341573}
+  second: {fileID: 4216639386261308406}
+  setTime: {fileID: 8553454623451235160}
+--- !u!114 &4274851449544022050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8373973572606336397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2a069a01a8fc4042bb0af8d6e15d4e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1183438547719459725
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -825,8 +888,23 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33892f7794bd075488ba7a5308c2aea0, type: 3}
+--- !u!1 &532601050018949485 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6281159279669916279, guid: 33892f7794bd075488ba7a5308c2aea0, type: 3}
+  m_PrefabInstance: {fileID: 5786849271881833242}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &580870435193612032 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6359274358187457562, guid: 33892f7794bd075488ba7a5308c2aea0, type: 3}
+  m_PrefabInstance: {fileID: 5786849271881833242}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8201366785542514706 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2422408160570274568, guid: 33892f7794bd075488ba7a5308c2aea0, type: 3}
+  m_PrefabInstance: {fileID: 5786849271881833242}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8948385127127177612 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3197564653881475734, guid: 33892f7794bd075488ba7a5308c2aea0, type: 3}
   m_PrefabInstance: {fileID: 5786849271881833242}
   m_PrefabAsset: {fileID: 0}
