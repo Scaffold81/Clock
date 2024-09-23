@@ -1,5 +1,8 @@
-﻿public interface IClockPresenter
+﻿namespace Core.Clock.Interfaces
 {
-    IClockPresenter Init(IClockModel clockModel, IClockView clockView, string url);
-    void InitClock();
+    public interface IClockPresenter
+    {
+        IClockPresenter Init(IClockModel clockModel, IClockView clockView, string url);
+        void InitClock();
+    }
 }

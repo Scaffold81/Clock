@@ -1,4 +1,7 @@
-﻿public interface IClockInputView
+﻿namespace Core.Clock.Interfaces
 {
-    IClockInputView Init(IClockModel clockModel);
+    public interface IClockInputView
+    {
+        IClockInputView Init(IClockModel clockModel);
+    }
 }

@@ -1,24 +1,36 @@
+using Core.Clock.Interfaces;
 using UnityEngine;
 
-public class ClockBase : MonoBehaviour
+namespace Core.Clock
 {
-    [SerializeField]
-    private string url = "http://time.microsoft.com";
-    private IClockView clockView;
-    private IClockInputView clockInputView;
-    private IClockModel clockModel;
-    private IClockPresenter clockPresenter;
-
-    private void Awake()
+    public class ClockBase : MonoBehaviour
     {
-        clockView = GetComponent<IClockView>();
-        clockModel = new ClockModel(); 
-        clockInputView = GetComponent<IClockInputView>().Init(clockModel);
-        clockPresenter = GetComponent<IClockPresenter>().Init(clockModel, clockView, url);;
-    }
+        [SerializeField]
+        private string url = "http://time.microsoft.com";
+        private IClockView clockView;
+        private IClockInputView clockInputView;
+        private IClockModel clockModel;
+        private IClockPresenter clockPresenter;
 
-    private void Start()
-    {
-        clockPresenter.InitClock();
+        [SerializeField]
+        private ClockArrowInputBase clockHourArrowInput;
+        [SerializeField]
+        private ClockArrowInputBase clockMinuteArrowInput;
+
+        private void Awake()
+        {
+            clockView = GetComponent<IClockView>();
+            clockModel = new ClockModel();
+            clockInputView = GetComponent<IClockInputView>().Init(clockModel);
+            clockPresenter = GetComponent<IClockPresenter>().Init(clockModel, clockView, url);
+
+            clockHourArrowInput.Init(clockModel);
+            clockMinuteArrowInput.Init(clockModel);
+        }
+
+        private void Start()
+        {
+            clockPresenter.InitClock();
+        }
     }
 }

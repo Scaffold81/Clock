@@ -1,8 +1,11 @@
 ﻿using System.Collections.Generic;
 
-public class Data
+namespace Core.Clock.Structures
 {
-    public long time;
+    public class Data
+    {
+        public long time;
 
-    public Dictionary<string, object> clocks { get; set; }
+        public Dictionary<string, object> clocks { get; set; }
+    }
 }

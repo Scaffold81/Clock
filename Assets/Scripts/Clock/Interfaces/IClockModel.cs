@@ -1,10 +1,14 @@
 ﻿using System;
 
-public interface IClockModel
+namespace Core.Clock.Interfaces
 {
-    DateTime LocalDateTime { get; set; }
-    DateTime ServerDateTime { get; set; }
+    public interface IClockModel
+    {
+        DateTime LocalDateTime { get; set; }
+        DateTime ServerDateTime { get; set; }
+        bool IsTimeToSet { get; set; }
 
-    void UpdateLocalDateTime(DateTime time);
-    void UpdateLocalTime(string serverResponse, bool start);
+        void UpdateLocalDateTime(DateTime time);
+        void UpdateLocalTime(string serverResponse, bool start);
+    }
 }

@@ -1,7 +1,11 @@
 ﻿using System;
 
-public interface IClockView
+namespace Core.Clock.Interfaces
 {
-    void UpdateAnalogTime(DateTime time);
-    void UpdateDigitalTime(DateTime time);
+    public interface IClockView
+    {
+        IClockView Init(IClockModel clockModel);
+        void UpdateAnalogTime(DateTime time);
+        void UpdateDigitalTime(DateTime time);
+    }
 }

@@ -1,115 +1,118 @@
+using Core.Clock.Interfaces;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ClockInputViewBase : MonoBehaviour, IClockInputView
+namespace Core.Clock
 {
-    [SerializeField]
-    private TMP_InputField hour;
-    [SerializeField]
-    private TMP_InputField minute;
-    [SerializeField]
-    private TMP_InputField second;
-
-    [SerializeField]
-    private Button setTime;
-
-
-    private bool isTimeToSet;
-
-    IClockModel model;
-
-    public IClockInputView Init(IClockModel clockModel)
+    public class ClockInputViewBase : MonoBehaviour, IClockInputView
     {
-        model = clockModel;
-        Subscribe();
+        [SerializeField]
+        private TMP_InputField hour;
+        [SerializeField]
+        private TMP_InputField minute;
+        [SerializeField]
+        private TMP_InputField second;
 
-        return this;
-    }
+        [SerializeField]
+        private Button setTime;
 
-    private void Subscribe()
-    {
-        hour.onEndEdit.AddListener(ChangeHour);
-        minute.onEndEdit.AddListener(ChangeMinute);
-        second.onEndEdit.AddListener(ChangeSecond);
+        private IClockModel model;
 
-        setTime.onClick.AddListener(ChangeSetTimeState);
-    }
-
-    private void ChangeSetTimeState()
-    {
-        var colors = setTime.image;
-
-        if (isTimeToSet)
+        public IClockInputView Init(IClockModel clockModel)
         {
-            colors.color = Color.white;
+            model = clockModel;
+            model.IsTimeToSet = false;
 
-            hour.interactable = false;
-            minute.interactable = false;
-            second.interactable = false;
-            isTimeToSet = false;
+            Subscribe();
+
+            return this;
         }
-        else
+
+        private void Subscribe()
         {
-            colors.color = Color.red;
 
-            hour.interactable = true;
-            minute.interactable = true;
-            second.interactable = true;
-            isTimeToSet = true;
+            hour.onEndEdit.AddListener(ChangeHour);
+            minute.onEndEdit.AddListener(ChangeMinute);
+            second.onEndEdit.AddListener(ChangeSecond);
+
+            setTime.onClick.AddListener(ChangeSetTimeState);
         }
-    }
-    private void ChangeHour(string value)
-    {
-        if (int.TryParse(value, out int hour))
+
+        private void ChangeSetTimeState()
+        {
+            var colors = setTime.image;
+
+            if (model.IsTimeToSet)
+            {
+                colors.color = Color.white;
+
+                hour.interactable = false;
+                minute.interactable = false;
+                second.interactable = false;
+                model.IsTimeToSet = false;
+            }
+            else
+            {
+                colors.color = Color.red;
+
+                hour.interactable = true;
+                minute.interactable = true;
+                second.interactable = true;
+                model.IsTimeToSet = true;
+            }
+        }
+
+        private void ChangeHour(string value)
+        {
+            if (int.TryParse(value, out int hourValue))
+            {
+                ChangeTimeValue(hourValue, 24, (date, newValue) => new DateTime(date.Year, date.Month, date.Day, newValue, date.Minute, date.Second));
+            }
+            else
+            {
+                Debug.LogError("Invalid input for hour: " + value);
+            }
+        }
+
+        private void ChangeMinute(string value)
+        {
+            if (int.TryParse(value, out int minuteValue))
+            {
+                ChangeTimeValue(minuteValue, 60, (date, newValue) => new DateTime(date.Year, date.Month, date.Day, date.Hour, newValue, date.Second));
+            }
+            else
+            {
+                Debug.LogError("Invalid input for minute: " + value);
+            }
+        }
+
+        private void ChangeSecond(string value)
+        {
+            if (int.TryParse(value, out int secondValue))
+            {
+                ChangeTimeValue(secondValue, 60, (date, newValue) => new DateTime(date.Year, date.Month, date.Day, date.Hour, date.Minute, newValue));
+            }
+            else
+            {
+                Debug.LogError("Invalid input for second: " + value);
+            }
+        }
+
+        private void ChangeTimeValue(int value, int maxLimit, Func<DateTime, int, DateTime> updateFunc)
         {
             var date = model.LocalDateTime;
 
-            if (hour < 24)
-                date = new DateTime(date.Year, date.Month, date.Day, hour, date.Minute, date.Second);
-
-            model.UpdateLocalDateTime(date);
+            if (value < maxLimit)
+            {
+                date = updateFunc(date, value);
+                model.UpdateLocalDateTime(date);
+            }
+            else
+            {
+                Debug.LogError("Invalid input value: " + value);
+            }
         }
-        else
-        {
-            Debug.LogError("Invalid input for hour: " + value);
-        }
-    }
-    private void ChangeMinute(string value)
-    {
-        if (int.TryParse(value, out int minute))
-        {
-            var date = model.LocalDateTime;
-            if (minute < 60)
-                date = new DateTime(date.Year, date.Month, date.Day, date.Hour, minute, date.Second);
-
-            model.UpdateLocalDateTime(date);
-        }
-        else
-        {
-
-            Debug.LogError("Invalid input for hour: " + value);
-        }
-    }
-
-    private void ChangeSecond(string value)
-    {
-        if (int.TryParse(value, out int second))
-        {
-            var date = model.LocalDateTime;
-
-            if (second < 60)
-                date = new DateTime(date.Year, date.Month, date.Day, date.Hour, date.Minute, second);
-
-            model.UpdateLocalDateTime(date);
-        }
-        else
-        {
-            Debug.LogError("Invalid input for hour: " + value);
-        }
-
     }
 }
