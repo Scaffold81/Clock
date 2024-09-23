@@ -26,4 +26,9 @@ public class ClockModel : IClockModel
             }
         }
     }
+
+    public void UpdateLocalDateTime(DateTime time)
+    {
+        LocalDateTime=time;
+    }
 }

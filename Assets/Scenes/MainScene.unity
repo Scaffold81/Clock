@@ -398,6 +398,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1040472129 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8553454623451235160, guid: 21e148a6e5afe0f4aa6f63431493f017, type: 3}
+  m_PrefabInstance: {fileID: 5911039594542256757}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1244167569 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8241335802687341573, guid: 21e148a6e5afe0f4aa6f63431493f017, type: 3}
@@ -461,6 +472,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   url: https://yandex.com/time/sync.json
+--- !u!114 &1772473444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1772473437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 567f31d6f2b786042ab0a7bdd41dc06f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hour: {fileID: 1605767208}
+  minute: {fileID: 1244167569}
+  second: {fileID: 430942648}
+  setTime: {fileID: 1040472129}
 --- !u!1001 &5911039594542256757
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -684,6 +711,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8373973572606336397, guid: 21e148a6e5afe0f4aa6f63431493f017, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1772473441}
+    - targetCorrespondingSourceObject: {fileID: 8373973572606336397, guid: 21e148a6e5afe0f4aa6f63431493f017, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1772473444}
   m_SourcePrefab: {fileID: 100100000, guid: 21e148a6e5afe0f4aa6f63431493f017, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

@@ -32,8 +32,10 @@ public class ClockViewBase : MonoBehaviour, IClockView
 
     public void UpdateDigitalTime(DateTime time)
     {
-        hour.text = time.Hour.ToString("D2") + " : ";
-        minute.text = time.Minute.ToString("D2") + " : ";
+        if(hour.IsInteractable())return;
+        
+        hour.text = time.Hour.ToString("D2");
+        minute.text = time.Minute.ToString("D2");
         second.text = time.Second.ToString("D2");
     }
 }

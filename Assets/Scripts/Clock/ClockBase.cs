@@ -11,16 +11,16 @@ public class ClockBase : MonoBehaviour
 {
     [SerializeField]
     private string url = "http://time.microsoft.com";
-
     private IClockView clockView;
+    private IClockInputView clockInputView;
     private IClockModel clockModel;
     private IClockPresenter clockPresenter;
 
     private void Awake()
     {
         clockView = GetComponent<IClockView>();
-        clockModel = new ClockModel();
-        
+        clockModel = new ClockModel(); 
+        clockInputView = GetComponent<IClockInputView>().Init(clockModel);
         clockPresenter = new ClockPresenter(clockModel, clockView, url);
     }
 
